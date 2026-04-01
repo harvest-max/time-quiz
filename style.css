@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  background: linear-gradient(180deg, #fff8e7 0%, #eaf6ff 100%);
+  color: #333;
+  min-height: 100vh;
+}
+
+.app {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 20px 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen {
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+
+.screen.active {
+  display: block;
+}
+
+.main-title {
+  font-size: 2rem;
+  line-height: 1.4;
+  margin: 0 0 36px;
+  color: #1d4e89;
+  font-weight: 800;
+}
+
+.screen-title {
+  font-size: 1.5rem;
+  margin: 8px 0 18px;
+  color: #1d4e89;
+}
+
+.main-btn,
+.sub-btn,
+.choice-btn {
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: transform 0.15s, opacity 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.main-btn:active,
+.sub-btn:active,
+.choice-btn:active {
+  transform: scale(0.97);
+}
+
+.main-btn {
+  width: 100%;
+  padding: 16px;
+  background: #ff9f1c;
+  color: white;
+  box-shadow: 0 6px 14px rgba(255, 159, 28, 0.25);
+}
+
+.sub-btn {
+  width: 100%;
+  padding: 14px;
+  background: #5c7cfa;
+  color: white;
+  box-shadow: 0 6px 14px rgba(92, 124, 250, 0.2);
+}
+
+.clock-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 8px 0 22px;
+  flex-wrap: nowrap;
+}
+
+.clock-box {
+  width: 44%;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 18px;
+  padding: 12px 8px 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.clock-label {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.arrow {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ff6b6b;
+  width: 12%;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  max-width: 160px;
+}
+
+.time-text {
+  margin-top: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #444;
+}
+
+.choices-wrap {
+  margin-top: 8px;
+}
+
+.choices-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.choice-btn {
+  width: 100%;
+  padding: 16px 12px;
+  background: #ffffff;
+  color: #222;
+  border: 3px solid #a5d8ff;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.06);
+}
+
+.choice-btn:hover {
+  opacity: 0.96;
+}
+
+.result-mark {
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.result-mark.correct {
+  color: #2b8a3e;
+}
+
+.result-mark.wrong {
+  color: #e03131;
+}
+
+.result-message {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 18px 14px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.result-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 380px) {
+  .main-title {
+    font-size: 1.7rem;
+  }
+
+  .screen-title {
+    font-size: 1.3rem;
+  }
+
+  .result-message {
+    font-size: 1.05rem;
+  }
+
+  .clock-label,
+  .time-text {
+    font-size: 0.92rem;
+  }
+
+  .arrow {
+    font-size: 1.4rem;
+  }
+}

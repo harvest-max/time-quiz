@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>どれくらい時間が経ったでしょう！</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+
+    <!-- タイトル画面 -->
+    <section id="title-screen" class="screen active">
+      <h1 class="main-title">どれくらい時間が経ったでしょう！</h1>
+      <button id="start-btn" class="main-btn">スタート</button>
+    </section>
+
+    <!-- 問題画面 -->
+    <section id="quiz-screen" class="screen">
+      <h2 class="screen-title">どれくらい時間がたったかな？</h2>
+
+      <div class="clock-area">
+        <div class="clock-box">
+          <div class="clock-label">はじめ</div>
+          <canvas id="clock-left" width="180" height="180"></canvas>
+          <div id="time-left-text" class="time-text"></div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="clock-box">
+          <div class="clock-label">あと</div>
+          <canvas id="clock-right" width="180" height="180"></canvas>
+          <div id="time-right-text" class="time-text"></div>
+        </div>
+      </div>
+
+      <div class="choices-wrap">
+        <p class="choices-title">えらんでね</p>
+        <div id="choices" class="choices"></div>
+      </div>
+    </section>
+
+    <!-- 結果画面 -->
+    <section id="result-screen" class="screen">
+      <div id="result-mark" class="result-mark"></div>
+      <p id="result-message" class="result-message"></p>
+
+      <div class="result-buttons">
+        <button id="continue-btn" class="main-btn">問題を続ける</button>
+        <button id="back-title-btn" class="sub-btn">タイトルに戻る</button>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
